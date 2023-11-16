@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>Arts | The Arts of Times</title>
+  <link rel="icon" type="image/x-icon" href="./images/favicon.png">
+  <link rel="stylesheet" href="style.css">
+  <script src="mykrisycode.js"></script>
+</head>
+<body>
+  <header>
+    <nav class="navbar">
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="arts.html">Arts</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+      
+      <div id="myNav" class="overlay">
+
+        <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+      
+        <div class="overlay-content">
+          <p class="p1">The Art of Times Club</p>
+          <p class="p2">BECOME A MEMBER</p>
+          <p class="p3">Join our exclusive membership program to enjoy premium and early access to our vast collection<br>
+            of artworks, download your favorite pieces, and enjoy exclusive features.</p>
+          <div class="container-parent-0">
+            <div class="container-0">
+              <p class="sea">INDIVIDUAL</p>
+              <p class="shell">Premium Access</p>
+              <p class="sand">$75</p>
+              <p class="shore">per year</p>
+              <button class="botn default">Buy now</button>
+            </div>
+            <div class="container-0">
+              <p class="sea">FAMILY</p>
+              <p class="shell">Premium Access</p>
+              <p class="sand">$99</p>
+              <p class="shore">per year</p>
+              <button class="botn default">Buy now</button>
+            </div>
+            <div class="container-0">
+              <p class="sea">LIFETIME</p>
+              <p class="shell">Premium Access</p>
+              <p class="sand">$249</p>
+              <p class="shore">per year</p>
+              <button class="botn default">Buy now</button>
+            </div>
+          </div>
+        </div>
+      
+      </div>
+
+      <div class="boorgir">
+        <img class="boorgir" onclick="openNav()" src="./images/hbm.png" alt="Hamurger Menu">
+      </div>
+    </nav>
+  </header>
+
+    <button onclick="goToTop()" id="goTopBtn"><img class="btt" src="./images/btt.png" alt="btt"></button>
+
+        <section class="container-13">
+            <div class="container-13-content">
+                <p class="a0">ARTS</p>
+            </div>
+        </section>
+    
+        <!-- buttons for each periods of western art -->
+          <section class="container-14">
+              <p class="pp14">The Art of Times</p>
+              <p class="pp24">PERIODS OF WESTERN ART</p> 
+              <p class="pp34">A Sanctuary for Art Connoisseurs: A Harmonious Blend of Timeless Elegance,<br>
+              Provocative Concepts, and Transcendent Beauty.</p>
+              <div class="button-container">
+                  <a href="zclassicalART.html"><button class="rounded-button">Classical Art</button></a>
+                  <a href="zmedievalART.html"><button class="rounded-button">Medieval Art</button></a>
+                  <a href="zrenaissanceART.html"><button class="rounded-button">Renaissance Art</button></a> 
+                  <a href="zneoclassicismART.html"><button class="rounded-button">Neoclassicism Art</button></a>
+                  <a href="zromanticismART.html"><button class="rounded-button">Romanticism Art</button></a>
+                  <a href="zmodernART.html"><button class="rounded-button">Modern Art</button></a>
+                  <a href="zcontemporaryART.html"><button class="rounded-button">Contemporary Art</button></a>
+              </div>
+
+              <!-- modal images -->
+                <div class="containur">
+                    <div class="image-containur">
+                      <div class="image"><img src="./ACR/A0.png" alt="Pic" data-caption="Classical Art encompasses the cultures of Greece and Rome and endures as the cornerstone of Western civilization. Including innovations in painting, sculpture, decorative arts, and architecture, Classical Art pursued ideals of beauty, harmony, and proportion, even as those ideals shifted and changed over the centuries. While often employed in propagandistic ways, the human figure and the human experience of space and their relationship with the gods were central to Classical Art."></div>
+                      <div class="image"><img src="./MEDA/B0.png" alt="Pic" data-caption="The Medieval Art of the Western world covers a vast scope of time and place, over 1000 years of art in Europe, and at certain periods in Western Asia and Northern Africa. It includes major art movements and periods, national and regional art, genres, revivals, the artists crafts, and the artists themselves."> </div>
+                      <div class="image"><img src="./RENA/CO.jpg" alt="Pic" data-caption="The Renaissance was a period in European history marking the transition from the Middle Ages to modernity and covering the 15th and 16th centuries. It occurred after the Crisis of the Late Middle Ages and was associated with great social change."></div>
+                      <div class="image"><img src="./NEA/D0.png" alt="Pic" data-caption="Neoclassicism was a Western cultural movement in the decorative and visual arts, literature, theatre, music, and architecture that drew inspiration from the art and culture of classical antiquity."></div>
+                      <div class="image"><img src="./ROMA/E0.png" alt="Pic" data-caption="Romanticism was an artistic, literary, musical, and intellectual movement that originated in Europe towards the end of the 18th century, and in most areas was at its peak in the approximate period from 1800 to 1850."></div>
+                      <div class="image"><img src="./MODA/FO.jpg" alt="Pic" data-caption="Modern art includes artistic work produced during the period extending roughly from the 1860s to the 1970s, and denotes the styles and philosophies of the art produced during that era. The term is usually associated with art in which the traditions of the past have been thrown aside in a spirit of experimentation."></div>
+                      <div class="image"><img src="./CONTA/GO.jpg" alt="Pic" data-caption="Contemporary art is the art of today, produced in the second half of the 20th century or in the 21st century. Contemporary artists work in a globally influenced, culturally diverse, and technologically advancing world."></div>
+                    </div>
+                    <div class="popup-image">
+                      <span>&times;</span>
+                      <img class="image" src="./ACR/A0.png" alt="Pic">
+                      <div class="caption"></div>
+                    </div>
+                  </div>
+                  
+                  <script>
+                    document.querySelectorAll('.image-containur img').forEach(image => {
+                        image.onclick = () => {
+                            const popupImage = document.querySelector('.popup-image');
+                            const popupImageImg = popupImage.querySelector('.image');
+                            const popupImageCaption = popupImage.querySelector('.caption');
+
+                            popupImage.style.display = 'block';
+                            popupImageImg.src = image.getAttribute('src');
+                            popupImageCaption.textContent = image.getAttribute('data-caption');
+                        };
+                        });
+
+                        document.querySelector('.popup-image span').onclick = () => {
+                        document.querySelector('.popup-image').style.display = 'none';
+                        };
+                  </script>
+                
+            </section>
+
+              <footer>
+                <p>&copy; 2023 The Art of Times. All rights reserved.</p>
+              </footer>
+           
+</body>
+</html>
